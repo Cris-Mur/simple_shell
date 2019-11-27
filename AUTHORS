@@ -1,0 +1,5 @@
+# This file list all individuals having contributed content to the repository.
+# content generate using command: $ git log --format='%aN <%aE>' | LC_ALL=C.UTF-8 sort -uf >> AUTHORS
+
+Cris-Mur <yomy98@gmail.com>
+Michael <maicol.asus@gmail.com>
