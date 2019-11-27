@@ -8,7 +8,7 @@
 
 char *_itoa(int num)
 {
-	schar *str;
+	char *str;
 	int i = 0, num_cpy = num;
 
 	while (num_cpy > 0)
