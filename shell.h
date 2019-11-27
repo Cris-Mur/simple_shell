@@ -31,4 +31,9 @@
 
 int _getenv(char **env);
 
+void prompt(char **argv);
+void error_msg(char *file, char *buffer, int counter);
+char *_itoa(int num);
+void handler(int x);
+
 #endif /* all shell.h*/
