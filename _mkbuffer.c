@@ -21,14 +21,14 @@ char *_mkbuffer(size_t size)
 		}
 	}
 	else
-    {
-        perror("WARNIG: Buffer mayor de 1024 bytes");
-        inventary = malloc(size * sizeof(char));
+	{
+		perror("WARNIG: Buffer mayor de 1024 bytes");
+		inventary = malloc(size * sizeof(char));
 		if (inventary == NULL)
 		{
 			free(inventary);
 			perror("Error memory corrupt");
 		}
-    }
+	}
 	return (inventary);
 }

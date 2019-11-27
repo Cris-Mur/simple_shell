@@ -2,9 +2,8 @@
 
 /**
  * _getcont - obtain name of the variable
- * @level: input linked list
+ * @vari: input linked list of enviroment variables
  * @str: input string
- * @name: name of the variable to modify
  * Return: string of the level
  */
 
@@ -12,8 +11,9 @@ char *_getcont(envi_t **vari, char *str)
 {
 	char *ret;
 	char *delim = "=";
-    envi_t *level;
-    level = *vari;
+	envi_t *level;
+
+	level = *vari;
 	while (level)
 	{
 		if ((_strcmp(level->name, str)) == 0)

@@ -2,7 +2,7 @@
 
 /**
  * print_vari - print list of content the ENV
- *
+ * @var: input enviroment structure
  * Return: size of the content
  */
 
