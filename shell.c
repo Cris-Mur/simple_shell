@@ -15,12 +15,8 @@ void prompt(char **argv)
 	pid_t son;
 
 	buffer = malloc(buffer_size * 1);
-
 	if (buffer == NULL)
-	{
-		perror("Unable to allocate buffer");
-		exit(1);
-	}
+		perror("Unable to allocate buffer"), exit(1);
 	while (1)
 	{
 		counter++;
@@ -29,24 +25,19 @@ void prompt(char **argv)
 			write(1, "$ ", 2);
 			signal(SIGINT, handler);
 			buffer_pos = getline(&buffer, &buffer_size, stdin);
-
 			if (_strcmp(buffer, "exit\n") == 0)
 				break;
 			if (buffer_pos == EOF)
-                        {
-                                write(1, "\n", 1), exit(0);
-                        }
-
+				write(1, "\n", 1), exit(0);
 			if (_strcmp(buffer, "\n") == 0)
 				continue;
-
 			son = fork();
 			if (son == -1)
 				free(buffer), perror("Error:");
 
 			if (son == 0)
 			{
-	        		error_msg(argv[0], buffer, counter);
+				error_msg(argv[0], buffer, counter);
 			}
 		}
 		else

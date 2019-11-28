@@ -19,7 +19,5 @@ void error_msg(char *file, char *buffer, int counter)
 	write(1, numberstr, (_strlen(numberstr)));
 	write(1, ": ", 2);
 	write(1, buffer, (_strlen(buffer) - 1));
-	write(1, ": not found\n", 12); /* exit 127*/
-	/*write(1,": command not found\n", 21); exit 0
-	  write(1,": no such file or directory\n", 29); exit 0*/
+	write(1, ": not found\n", 12);
 }
