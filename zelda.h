@@ -53,7 +53,8 @@ char *_getcont(envi_t **level, char *str);
 #define ENVI_VAR
 
 envi_t *envi;
-
+envi_t *_path;
+envi_t *_pwd;
 #endif
 
 #endif

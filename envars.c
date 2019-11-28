@@ -9,7 +9,9 @@
 int _getenv(char **env)
 {
 	int i;
-	char *name, *env_line, *cont;
+	char *name = NULL;
+	char *env_line = NULL;
+	char *cont = NULL;
 
 	envi = create();
 
@@ -23,4 +25,3 @@ int _getenv(char **env)
 	}
 	return (0);
 }
-
