@@ -12,6 +12,7 @@ void prompt(char **argv)
 	size_t buffer_size = 1024;
 	size_t buffer_pos;
 	int counter = 0;
+	pid_t son;
 
 	buffer = malloc(buffer_size * 1);
 
@@ -30,15 +31,23 @@ void prompt(char **argv)
 			buffer_pos = getline(&buffer, &buffer_size, stdin);
 
 			if (_strcmp(buffer, "exit\n") == 0)
-				free(buffer), exit(130);
+				break;
+			if (buffer_pos == EOF)
+                        {
+                                write(1, "\n", 1), exit(0);
+                        }
 
-			if (buffer_pos == -1)
+			if (_strcmp(buffer, "\n") == 0)
+				continue;
+
+			son = fork();
+			if (son == -1)
+				free(buffer), perror("Error:");
+
+			if (son == 0)
 			{
-				write(1, "\n", 1);
-				free(buffer), exit(130);
+	        		error_msg(argv[0], buffer, counter);
 			}
-			else
-				error_msg(argv[0], buffer, counter);
 		}
 		else
 		{
