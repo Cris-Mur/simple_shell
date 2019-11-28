@@ -1,0 +1,29 @@
+.\" Manpage for Simple Shell
+.TH man 1 "23 Nov 2019" "Alpha - 1.0" "Simple Shell"
+.SH NAME
+.B Simple shell - like GNU Bourne - Again Shell
+
+ensure that this shell was compiled
+
+.SH SYNOPSIS
+
+.B ./hsh [options] [command_string | file]
+
+.SH COPYRIGHT
+.B HSH use the fair use copyright, is only academic exercise.
+for the loles
+.SH DESCRIPTION
+hsh is an sh-compatible command language interpreter that executes commands read from the standard input or from a file.
+
+.SH INVOCATION
+An shell in interactive mode is a typical that wait for your comman.
+this shell in interactive mode only display "$" of the shell.
+
+An non-interactive mode is when you use shell unsing pipelines for input parameters.
+this shell in non-interactive mode use 'echo "command" | ./hsh'.
+.SH AUTHORS
+Cristian Murcia, Holberton Shchool - 
+yomy98@gmail.com
+
+Michael Cocouy, Holberton Shchool - 
+maicol.asus@gmail.com
