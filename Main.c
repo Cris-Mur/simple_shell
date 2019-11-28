@@ -11,7 +11,7 @@
 int main(int argc, char *argv[], char *env[])
 {
 	_getenv(env);
-	print_envi(envi);
+	//print_envi(envi);
 	(void)argc;
 	prompt(argv);
 	return (0);
